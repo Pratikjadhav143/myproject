@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="submit" onclick="greet()">open</button>
+    <button type="submit" onclick="hello(5,8)">submit</button>
+    <button type="submit" onmouseover="even(7,8)">find even odd</button>
+    <button type="submit" onkeydown="even(6,9)">practice</button>
+    <button type="submit" ondrag="even(6,9)">drag</button>
+    <button type="submit" onfocus="greternum() ">find largest number</button>
+    <button type="submit" onmousemove="findtaable()">find any table</button>
+    <button type="submit" onload="findtaable()">find any table onload</button>
+<h1 id="emp"></h1>
+<button type="submit" id="btn">click here</button>
+<h1 id="emp1"></h1>
+<button id="btn1">click here also</button>
+
+
+
+    <script>
+document.getElementById('est').addEventListener('click',function(){
+document.getElementById('sem').innerHTML="hey there!";
+})
+
+document.getElementById('btn1').addEventListener('mouseover',function(){
+    document.getElementById('emp1').innerText="hello i am h1 tag!";
+})
+
+
+
+
+
+        function findtaable(){
+            let find=parseInt(prompt("enter any number"))
+            for(let i=1;i<=10;i++){
+                document.write(i*find +"<br>")
+            }
+        }
+        function greternum(){
+            let num1=parseInt(prompt("enter 1st number"));
+            let num2=parseInt(prompt("enter 2nd number"));
+            let num3=parseInt(prompt("enter 3rd number"));
+//let largestnum;
+if(num1>=num2 && num1>=num3){
+    document.write(`largest number is ${num1} `);
+}
+else if(num2>=num1 && num2>=num3){
+    document.write(`largest number is ${num2} `);
+}
+else{
+    document.write(`largest number is ${num3} `)
+}
+//document.write("largets number is"+largestnum);
+        }
+        function greet()
+        {
+            document.write('onclick event in javascript')
+        }
+        function hello(m,n){
+            let result=m*n;
+return document.write(`sum of ${m} and ${n}=${result} `);
+        }
+
+        function even(a,b){
+            if(a%2==0){
+                document.write("a is even numbre");
+            }
+            else{
+                document.write("a is odd number");
+            }
+        }
+
+    </script>
+</body>
+</html>
